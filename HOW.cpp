@@ -1,35 +1,33 @@
 #include <iostream>
-#include <math.h>
 using namespace std;
  
-int BinToDecimal (long long);
- 
-int main() 
+// Função para converter Binário para Decimal
+int binaryToDecimal(int n)
 {
-  long long binNum;
-  cout <<"Por favor, insira um numero binario com 8 digitos : ";
-  cin >> binNum;
-   
-  long decimalNum = BinToDecimal(binNum);
-  cout <<"O equivalente do binario " << binNum <<" em decimal = "<< decimalNum ;
+    int num = n;
+    int dec_valor = 0;
  
-  return 0;
+    // Valor base de 1, para evitar o valor nulo de 2^0
+    int base = 1;
+ 
+    int temp = num;
+    while (temp) {
+        int ultimodigito = temp % 10;
+        temp = temp / 10;
+ 
+        dec_valor += ultimodigito * base;
+ 
+        base = base * 2;
+    }
+ 
+    return dec_valor;
 }
  
- 
-int BinToDecimal(long long binNo) 
+// Função de teste da função acima
+// Inserir o valor desejado para conversão na variável num abaixo
+int main()
 {
-  int decNum = 0;
-  int index = 0;
-  int remainder;
+    int num = 00000101;
  
-  while (binNo!=0) 
-  {
-    remainder = binNo % 10;
-    binNo /= 10;
-    decNum += remainder * pow(2, index);
-    ++index;
-  }
- 
-  return decNum;
+    cout << binaryToDecimal(num) << endl;
 }
