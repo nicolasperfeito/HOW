@@ -7,11 +7,11 @@ int BinToDecimal (long long);
 int main() 
 {
   long long binNum;
-  cout <<"Please enter 8 bit binary number : ";
+  // cout <<"Por favor, insira um número binário com 8 dígitos : ";
   cin >> binNum;
    
   long decimalNum = BinToDecimal(binNum);
-  cout <<"Decimal Equivalent to Binary number = " << binNum <<" is "<< decimalNum ;
+  cout <<"O equivalente do binário " << binNum <<" em decimal, é : "<< decimalNum ;
  
   return 0;
 }
