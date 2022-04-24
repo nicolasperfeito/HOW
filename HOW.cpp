@@ -24,7 +24,7 @@ int binaryToDecimal(int n)
 }
  
 // Função de teste da função acima
-// Inserir o valor desejado para conversão na variável num abaixo
+// Inserir o valor desejado para conversão na variável "num" abaixo e rodar o código para obter o valor em decimal
 int main()
 {
     int num = 00000101;
